@@ -11,6 +11,8 @@ namespace MohawkGame2D
     public class Game
     {
 
+        Brushes Default = new Brushes();
+
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
@@ -28,8 +30,7 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-            if (Input.IsMouseButtonDown(MouseButton.Left) == true)
-                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 10);
+            Default.Update();
 
             if (Input.IsKeyboardKeyPressed(KeyboardKey.Q) == true)
                 Window.ClearBackground(255);
